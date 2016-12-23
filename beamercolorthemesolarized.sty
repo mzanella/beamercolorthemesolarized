@@ -19,6 +19,7 @@
 \ProvidesPackage{beamercolorthemesolarized}[2013/10/11 1.0.1 Solarized color theme for beamer]
 \RequirePackage{etoolbox}
 \RequirePackage{kvoptions}
+\RequirePackage{graphicx}
 
 %% This is ugly. First time using options and conditionals in LaTeX
 \SetupKeyvalOptions{
@@ -151,6 +152,122 @@
 \setbeamercolor*{section in sidebar}{parent=palette sidebar primary, fg=solarizedRebase02}
 \setbeamercolor*{subsection in sidebar}{parent=section in sidebar}
 \setbeamercolor*{subsection in sidebar shaded}{parent=section in sidebar shaded}
+
+%%%
+
+\newcommand\titlepic{theme/unipd-logo}
+
+\setbeamertemplate{itemize item}[default]
+\setbeamertemplate{itemize subitem}[circle]
+
+% disable navigation symbols 
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}
+{
+	\ifbeamer@plainframe
+	\else
+	\vspace{-.25cm}
+	\textbf{\insertframetitle}
+	\begin{textblock*}{1cm}(9.7cm,-7.5cm)
+		\rule{2cm}{7.5cm}
+		\includegraphics[scale=0.55]{theme/unipd-logo}
+	\end{textblock*}
+	\vspace{.50cm}
+	\fi
+}
+
+% headline
+\setbeamertemplate{headline}{
+	\ifbeamer@plainframe
+	\else
+	\vspace{8mm}
+	\leavevmode\tiny%
+	\hspace*{9.15cm}
+	\normalsize
+	\fi
+}
+
+% title page
+\setbeamertemplate{title page}{
+	\textbf{\LARGE{\inserttitle}}
+	\vspace{1cm}
+	\textbf{\large{\insertsubtitle}}
+	\vfill
+	\begin{columns}
+		\begin{column}{.45\textwidth}
+			\textbf{\insertauthor}\\[3mm]
+			\scriptsize
+			\dep \\
+			\vspace*{0.25cm}
+			\insertshortinstitute
+			\vspace*{0.25cm}
+			\insertshortdate
+		\end{column}
+		\begin{column}{.45\textwidth}
+			\hfill\includegraphics[scale=0.8,keepaspectratio]{\titlepic}
+		\end{column}
+	\end{columns}
+	\normalsize
+	\setbeamertemplate{footline}{}
+}
+
+% footer with name, date and page numbers
+\setbeamertemplate{footline}{
+	\ifbeamer@plainframe
+	\else
+	\leavevmode\tiny%
+	\hspace*{2.0cm}%
+	\makebox[3cm][l]{\insertauthor}%
+	\makebox[3cm][l]{\insertdate}%
+	\hfill
+	\ifx\insertsection\empty
+	\else
+	\insertsection
+	\fi
+	\ifx\insertsubsection\empty
+	\else
+	:\insertsubsection
+	\fi
+	\ifx\insertsubsubsection\empty
+	\else
+	:\insertsubsubsection
+	\fi
+	\ifx\turnOffNumbers\empty
+	\hfill\insertframenumber/\inserttotalframenumber\hspace{5mm}%
+	\else
+	\fi
+	\vspace{3mm}%
+	\fi
+}
+
+\def\makethanks{%
+	\begin{frame}[plain, noframenumbering]
+		
+		% UniPD
+		\begin{textblock*}{1cm}(0cm,-7.5cm)
+			\rule{2cm}{7.5cm}
+			\includegraphics[scale=0.75]{theme/unipd-logo}
+		\end{textblock*}
+		
+		\vspace{1cm}
+		\begin{center}
+			{\fontsize{20pt}{15pt}\selectfont
+				Thank you for your attention. \\
+				\vspace{2cm}
+				Questions?
+			}
+		\end{center}
+		% Dipartimento di matematica
+		\begin{textblock*}{1cm}(9.9cm,7.6cm)
+			%\rule{2cm}{7.5cm}
+			\includegraphics[scale=0.2]{theme/math_unipd}
+		\end{textblock*}
+	\end{frame}
+}
+
+
+%%%
 
 \mode
 <all>
