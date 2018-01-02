@@ -54,12 +54,12 @@ The package defines the sixteen colors of the Solarized palette.
 
 :: 
 
-    solarizedBase03    #002b36 
-    solarizedBase02    #073642 
-    solarizedBase01    #586e75 
-    solarizedBase00    #657b83 
-    solarizedBase0     #839496 
-    solarizedBase1     #93a1a1 
+    solarizedBase03    #212121 
+    solarizedBase02    #000000 
+    solarizedBase01    #BDBDBD 
+    solarizedBase00    #424242 
+    solarizedBase0     #FFFFFF 
+    solarizedBase1     #FFFFFF 
     solarizedBase2     #eee8d5 
     solarizedBase3     #fdf6e3 
     solarizedYellow    #b58900 
@@ -94,10 +94,10 @@ A light background with yellow  accents (the default).
 
   \usecolortheme{solarized} 
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_yellow_light-1.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/yellowlight1.png
    :scale: 50%
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_yellow_light-2.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/yellowlight2.png
    :scale: 50%
 
 Example 2
@@ -110,10 +110,10 @@ A light background with blue accents.
   \usecolortheme[accent=blue]{solarized} 
 
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_blue_light-1.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/bluelight1.png
    :scale: 50%
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_blue_light-2.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/bluelight2.png
    :scale: 50%
 
 Example 3
@@ -125,10 +125,10 @@ A dark background with yellow accents.
 
   \usecolortheme[dark]{solarized} 
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_yellow_dark-1.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/yellowdark1.png
    :scale: 50%
 
-.. image:: https://raw.github.com/jrnold/beamercolorthemesolarized/master/examples/example_yellow_dark-2.png
+.. image:: https://raw.github.com/mzanella/beamercolorthemesolarized/master/examples/yellowdark2.png
    :scale: 50%
 
 ..  LocalWords:  solarized
